@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Solicite ao usuário para informar dois números e um operador
+            matemático. Você usará três prompt(), um para cada número e
+            o terceiro para o operador.
+            Aceite os seguintes operadores:
+            + => adição
+            - => subtração
+            *, X ou x => multiplicação
+            / ou : => divisão
+            Efetue o cálculo apropriado de acordo com o operador informado
+            e informe o resultado usando document.write().
+        */
+
+        const num1 = parseFloat(prompt('Digite o primeiro número'));
+
+        const num2 = parseFloat(prompt('Digite o segundo número'));
+
+        const op = prompt('Digite o operador do cálculo');
+
+        let resultado = 0;
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert('Um número inválido foi inserido!')
+        } else {
+            switch (op.trim()) {
+                case '+':
+                    resultado = num1 + num2;
+                    alert(`O resultado é ${resultado} !`)
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    alert(`O resultado é ${resultado} !`)
+                    break;
+                case '*':
+                case 'X':
+                case 'x':
+                    resultado = num1 * num2;
+                    alert(`O resultado é ${resultado} !`)
+                    break;
+                case '/':
+                case ':':
+                    resultado = num1 / num2
+                    alert(`O resultado é ${resultado} !`)
+                    break;
+                default:
+                    alert(`${op} não é um operador válido!`)
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
