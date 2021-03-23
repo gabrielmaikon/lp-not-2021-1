@@ -28,7 +28,7 @@
 
         do {
             num = parseInt(prompt('Insira um número inteiro maior que 1: '));
-        } while (isNaN(num))
+        } while (isNaN(num) || num <= 1)
 
         for (let i = num; i > 1; i--) {
             fat *= i;
